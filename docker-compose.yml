@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   frontend:
+    image: ${DOCKER_USERNAME}/pokemon-frontend:latest
     build: 
       context: ./frontend
       dockerfile: Dockerfile
@@ -13,6 +14,7 @@ services:
       - backend
 
   backend:
+    image: ${DOCKER_USERNAME}/pokemon-backend:latest
     build:
       context: ./backend
       dockerfile: Dockerfile
