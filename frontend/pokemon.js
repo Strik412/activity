@@ -72,7 +72,7 @@ async function addToFavorites(pokemonId, name, sprite) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': token
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify({ pokemonId, name, sprite })
         });

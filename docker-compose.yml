@@ -2,7 +2,6 @@ version: '3.8'
 
 services:
   frontend:
-    image: ${DOCKER_USERNAME}/pokemon-frontend:latest
     build: 
       context: ./frontend
       dockerfile: Dockerfile
@@ -14,7 +13,6 @@ services:
       - backend
 
   backend:
-    image: ${DOCKER_USERNAME}/pokemon-backend:latest
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -24,7 +22,8 @@ services:
       - app-network
     environment:
       - NODE_ENV=production
-      - MONGODB_URI=mongodb://mongo:27017/pokemon_app
+    env_file:
+      - ./backend/.env
     depends_on:
       - mongo
 

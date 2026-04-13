@@ -7,10 +7,7 @@ async function initializeDb() {
     const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/pokemon_app';
     try {
         console.log(`Conectando a MongoDB en: ${mongoUri}`);
-        await mongoose.connect(mongoUri, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        });
+        await mongoose.connect(mongoUri);
         
         // Crear usuario por defecto
         const defaultUser = {

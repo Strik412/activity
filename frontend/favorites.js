@@ -9,7 +9,7 @@ async function loadFavorites() {
         const token = localStorage.getItem('token');
         const response = await fetch('/api/favorites', {
             headers: {
-                'Authorization': token
+                'Authorization': `Bearer ${token}`
             }
         });
         
