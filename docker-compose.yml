@@ -1,6 +1,6 @@
 services:
   frontend:
-    image: dapaeza/activity-frontend:main   # 👈 cambia aquí: main / dev / qa
+    image: dapaeza/activity-frontend:main
     ports:
       - "80:80"
     networks:
@@ -9,7 +9,7 @@ services:
       - backend
 
   backend:
-    image: dapaeza/activity-backend:main   # 👈 cambia aquí también
+    image: dapaeza/activity-backend:main
     ports:
       - "5000:5000"
     networks:
