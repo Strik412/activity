@@ -1,10 +1,6 @@
-version: '3.8'
-
 services:
   frontend:
-    build: 
-      context: ./frontend
-      dockerfile: Dockerfile
+    image: dapaeza/activity-frontend:main
     ports:
       - "80:80"
     networks:
@@ -13,9 +9,7 @@ services:
       - backend
 
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    image: dapaeza/activity-backend:main
     ports:
       - "5000:5000"
     networks:
@@ -40,10 +34,5 @@ networks:
   app-network:
     driver: bridge
 
-
-    
-
 volumes:
   mongodb_data:
-
-
