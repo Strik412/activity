@@ -1,6 +1,6 @@
 services:
   frontend:
-    image: dapaeza/activity-frontend:main
+    image: dapaeza/activity-frontend:qa
     ports:
       - "80:80"
     networks:
@@ -9,7 +9,7 @@ services:
       - backend
 
   backend:
-    image: dapaeza/activity-backend:main
+    image: dapaeza/activity-backend:qa
     ports:
       - "5000:5000"
     networks:
