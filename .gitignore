@@ -1,7 +1,3 @@
-# Environment files
-backend/.env
-backend/.env.*
-
 # Local env files (frontend if any)
 frontend/.env
 frontend/.env.*
